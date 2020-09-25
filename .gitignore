@@ -10,7 +10,7 @@ npm-debug.log*
 
 # IDE
 .DS_STORE
-.idea/
+.idea
 *.iml
 .vscode
 

@@ -7,11 +7,7 @@ module.exports = {
     node: true,
     jest: true,
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:import/recommended',
-    'prettier',
-  ],
+  extends: ['eslint:recommended', 'plugin:import/recommended', 'prettier'],
   plugins: ['import', 'prettier'],
   parser: 'babel-eslint',
   parserOptions: {
