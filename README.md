@@ -31,7 +31,7 @@ table({ x: 1, y: 2 });
 ## Group Type API
 
 ```javascript
-LogUtils.group(
+group(
   [
     1,
     2,
@@ -48,9 +48,9 @@ LogUtils.group(
   'GROUP 1'
 );
 
-LogUtils.groupLog(1, null, 'GROUP LOG', { color: '#8e3278' });
-LogUtils.groupDir({ x: 1, y: 2 }, 'GROUP DIR', { color: '#8e3278' });
-LogUtils.groupTable({ x: 1, y: 2 }, 'GROUP TABLE', { color: '#8e3278' });
+groupLog(1, null, 'GROUP LOG', { color: '#8e3278' });
+groupDir({ x: 1, y: 2 }, 'GROUP DIR', { color: '#8e3278' });
+groupTable({ x: 1, y: 2 }, 'GROUP TABLE', { color: '#8e3278' });
 ```
 
 ## Group Collapsed Type API
