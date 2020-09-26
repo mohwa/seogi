@@ -1,16 +1,14 @@
 # seogi
 
-This library improved use way console api. So you will able to use console api more better and more simplity.
-
+This library improved use way console api so you will able to use them more better and more simplity and you can use similarly to existing console api.
 
 # NPM Package Install
+
 ```javascript
 npm i seogi
 ```
 
-## Normal API 
-
-You can use normal api like an console api
+## Normal API
 
 ```javascript
 log('Hello World', { color: 'gray', backgroundColor: 'yellow', fontSize: '10px' });
@@ -22,8 +20,8 @@ assert(() => true /* or false */, 'Hello World', { color: 'gray', backgroundColo
 ```
 
 ## Object Type API
- 
-This api include argument of object type and same to console api 
+
+This api include argument of object type and it same to console api
 
 ```javascript
 dir({ x: 1 });
@@ -31,8 +29,6 @@ table({ x: 1, y: 2 });
 ```
 
 ## Group Type API
-
-You will able to use api to improved way from console api 
 
 ```javascript
 LogUtils.group(
@@ -58,8 +54,6 @@ LogUtils.groupTable({ x: 1, y: 2 }, 'GROUP TABLE', { color: '#8e3278' });
 ```
 
 ## Group Collapsed Type API
-
-You will able to use api to improved way from console api
 
 ```javascript
 groupCollapsed(
