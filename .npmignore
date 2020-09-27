@@ -1,8 +1,0 @@
-example
-lib
-node_modules
-tests
-jest.config.js
-package-lock.json
-webpack.config.js
-.*

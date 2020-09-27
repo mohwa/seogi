@@ -1,12 +1,9 @@
 # Dependency directories
 node_modules
 
-# lock file
-yarn.lock
-
 # log
-*.log*
-npm-debug.log*
+*.log
+npm-debug.log
 
 # IDE
 .DS_STORE
