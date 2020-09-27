@@ -35,6 +35,7 @@
   },
   "files": [
     "dist",
+    "index.js",
     "README.md"
   ],
   "homepage": "https://github.com/mohwa/seogi#readme",
