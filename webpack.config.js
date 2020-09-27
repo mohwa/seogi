@@ -28,15 +28,15 @@ module.exports = {
     publicPath: '/',
     filename: isDev ? '[name].js' : '[name].min.js',
   },
-  devtool: 'eval-source-map',
+  devtool: isDev ? '' : 'source-map',
   resolve: {
     modules: ['src', 'node_modules'],
-    extensions: ['.js', '.jsx', '.json', 'css'],
+    extensions: ['.js'],
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.js$/,
         loader: 'babel-loader',
         include: [libPath, examplePath],
       },

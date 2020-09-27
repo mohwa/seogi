@@ -1,6 +1,6 @@
 {
   "name": "seogi",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "This is the library that improved native console API",
   "keywords": [
     "seogi",
@@ -8,7 +8,7 @@
     "log",
     "libray"
   ],
-  "main": "./dist/seogi.min.js",
+  "main": "./index.js",
   "scripts": {
     "webpack-dev-server": "webpack-dev-server --config webpack.config.js",
     "webpack": "webpack --config webpack.config.js",
@@ -34,7 +34,7 @@
     "email": "yanione2@gmail.com"
   },
   "files": [
-    "dist/",
+    "dist",
     "README.md"
   ],
   "homepage": "https://github.com/mohwa/seogi#readme",
@@ -72,10 +72,10 @@
     }
   },
   "lint-staged": {
-    "*.{js,json,css,md}": [
+    "*.{js,md}": [
       "prettier --write"
     ],
-    "*.{js,jsx}": [
+    "*.{js}": [
       "eslint"
     ]
   }
