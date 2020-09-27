@@ -2,11 +2,17 @@
 
 This library improved use way console api so you will able to use them more better and more simplity and you can use similarly to existing console api.
 
-# NPM Package Install
+# Install
 
 ```javascript
 npm i seogi
 ```
+
+# Support Platforms
+
+All Browsers
+
+> Maybe you will able to use on Node.js from just soon...
 
 ## Normal API
 
