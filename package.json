@@ -1,6 +1,6 @@
 {
   "name": "seogi",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "This is the library that improved native console API",
   "keywords": [
     "seogi",
@@ -33,6 +33,9 @@
     "url": "https://github.com/mohwa/seogi/issues",
     "email": "yanione2@gmail.com"
   },
+  "files": [
+    "dist"
+  ],
   "homepage": "https://github.com/mohwa/seogi#readme",
   "devDependencies": {
     "@babel/core": "^7.6.2",
