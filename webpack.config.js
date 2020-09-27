@@ -27,6 +27,8 @@ module.exports = {
     path: OUTPUT_PATH,
     publicPath: '/',
     filename: isDev ? '[name].js' : '[name].min.js',
+    library: '[name]',
+    libraryTarget: 'umd',
   },
   devtool: isDev ? '' : 'source-map',
   resolve: {
