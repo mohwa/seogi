@@ -41,15 +41,15 @@ group(
   [
     1,
     2,
-    () => LogUtils.group([3, 4, 5], 'GROUP 2'),
+    () => group([3, 4, 5], 'GROUP 2'),
     '6',
-    () => LogUtils.log('LOG'),
+    () => log('LOG'),
     7,
-    () => LogUtils.table({ x: 1, y: 2 }),
-    () => LogUtils.groupTable({ x: 1, y: 2 }, 'GROUP TABLE'),
+    () => table({ x: 1, y: 2 }),
+    () => groupTable({ x: 1, y: 2 }, 'GROUP TABLE'),
     8,
-    () => LogUtils.group([9, 10], 'GROUP 3'),
-    () => LogUtils.groupDir({ x: 1, y: 2 }, 'GROUP DIR'),
+    () => group([9, 10], 'GROUP 3'),
+    () => groupDir({ x: 1, y: 2 }, 'GROUP DIR'),
   ],
   'GROUP 1'
 );
