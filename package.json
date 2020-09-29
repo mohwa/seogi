@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "seogi",
   "version": "0.0.10",
   "description": "This is the library that improved native console API",
@@ -79,5 +80,8 @@
     "*.{js}": [
       "eslint"
     ]
+  },
+  "dependencies": {
+    "chalk": "^4.1.0"
   }
 }
