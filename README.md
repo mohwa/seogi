@@ -26,6 +26,8 @@ assert(() => true /* or false */, 'Hello World', {
 });
 ```
 
+
+
 ## Object Type API
 
 This api include argument of object type and it same to console api
