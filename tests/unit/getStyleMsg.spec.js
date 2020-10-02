@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { getStyleMsg, __RewireAPI__ as leaveRewireAPI } from '../../lib/index';
+import { getStyleMsg, __RewireAPI__ as leaveRewireAPI } from '../../lib';
 
 describe('getStyleMsg', () => {
   it('should be return message of string type', () => {

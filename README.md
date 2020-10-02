@@ -91,7 +91,7 @@ groupCollapsedTable({ x: 1, y: 2 }, 'GROUP COLLAPSED TABLE', { color: 'blue' });
 
 This library used [chalk library](https://github.com/chalk/chalk) that expression color on the NodeJS
 
-You can check color list that you can use in [this link]((https://github.com/chalk/chalk)) and you can use like following codes all feature of the chalk library.
+You can check color list that you can use in [this link](<(https://github.com/chalk/chalk)>) and you can use like following codes all feature of the chalk library.
 
 ## Normal API
 

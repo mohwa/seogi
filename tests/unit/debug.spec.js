@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { debug, __RewireAPI__ as leaveRewireAPI } from '../../lib/index';
+import { debug, __RewireAPI__ as leaveRewireAPI } from '../../lib';
 
 describe('debug', () => {
   let spy;
