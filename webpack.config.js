@@ -13,7 +13,7 @@ const isDev = PHASE === 'DEV';
 const isDevServer = ACTION === 'DEV_SERVER';
 const mode = isDev ? 'development' : 'production';
 const libPath = resolve('lib', 'index.js');
-const examplePath = resolve('example', 'index.js');
+const examplePath = resolve('examples/browser', 'index.js');
 
 module.exports = {
   context: ROOT_PATH,
@@ -29,6 +29,7 @@ module.exports = {
     filename: isDev ? '[name].js' : '[name].min.js',
     library: '[name]',
     libraryTarget: 'umd',
+    globalObject: 'this',
   },
   devtool: isDev ? '' : 'source-map',
   resolve: {

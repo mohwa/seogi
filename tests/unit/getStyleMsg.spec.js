@@ -95,7 +95,7 @@ describe('getStyleMsg', () => {
     // Given
     const message = 'test';
     const style = { color: 'red', fontSize: '17px' };
-    const mockFnName = 'getConsoleStyle';
+    const mockFnName = 'getStyleInfo';
     const resultStyle = 'color:red;fontSize:17px';
 
     leaveRewireAPI.__Rewire__(mockFnName, () => {
@@ -118,7 +118,7 @@ describe('getStyleMsg', () => {
       { color: 'red', fontSize: '17px' },
       { color: 'blue', fontSize: '20px' },
     ];
-    const mockFnName = 'getConsoleStyle';
+    const mockFnName = 'getStyleInfo';
     const resultMessages = ['%ctest1', '%ctest2'];
 
     leaveRewireAPI.__Rewire__(mockFnName, v => {
