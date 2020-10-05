@@ -1,6 +1,6 @@
 # seogi
 
-This library improved use way console api so you will able to use them more better and more simplity and you can use similarly to existing console api.
+This library improved use way console api so you will able to use them more better and more simplity and you can use similarly like existing console api.
 
 # Install
 
