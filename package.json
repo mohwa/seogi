@@ -1,6 +1,6 @@
 {
   "name": "seogi",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "This is the library that improved native console API",
   "keywords": [
     "seogi",
@@ -51,7 +51,6 @@
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
-    "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^26.3.0",
     "babel-loader": "^8.0.6",
@@ -87,7 +86,7 @@
     ]
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=12"
   },
   "bundlesize": [
     {
