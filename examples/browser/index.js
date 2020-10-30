@@ -15,6 +15,7 @@ const {
   groupCollapsedLog,
   groupCollapsedDir,
   groupCollapsedTable,
+  getStyleMsg,
 } = require('../../lib');
 
 log('Hello World');
@@ -79,3 +80,12 @@ groupCollapsed(
 groupCollapsedLog('test', null, 'GROUP COLLAPSED LOG', { color: 'green' });
 groupCollapsedDir({ x: 1, y: 2 }, 'GROUP COLLAPSED DIR', { color: 'yellow' });
 groupCollapsedTable({ x: 1, y: 2 }, 'GROUP COLLAPSED TABLE', { color: 'blue' });
+
+console.log(...getStyleMsg('Hello World'));
+console.log(...getStyleMsg(['Hello', 'World']));
+console.log(
+  ...getStyleMsg('Hello World', { color: 'red', backgroundColor: 'cyan', fontWeight: 'bold', fontSize: '10px' })
+);
+console.log(...getStyleMsg(['Hello', 'World'], { color: 'cyan', backgroundColor: 'yellow' }));
+console.log(...getStyleMsg(['Hello', 'World'], [{ color: 'magenta', backgroundColor: 'blue' }]));
+console.log(...getStyleMsg(['Hello', 'World'], [{ color: 'blue', backgroundColor: 'magenta' }, { color: 'cyan' }]));

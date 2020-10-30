@@ -1,15 +1,15 @@
 // eslint-disable-next-line
 import { __RewireAPI__ as seogiRewireAPI } from '../../lib';
 
-describe('getCreatorChalkMsg', () => {
-  const getCreatorChalkMsg = seogiRewireAPI.__get__('getCreatorChalkMsg');
+describe('getCreatorColorsMsg', () => {
+  const getCreatorColorsMsg = seogiRewireAPI.__get__('getCreatorColorsMsg');
 
   it('should be return undefined when not there is some style attributes', () => {
     // Given
     const style = { fontSize: '17px' };
 
     // When
-    const result = getCreatorChalkMsg(style);
+    const result = getCreatorColorsMsg(style);
 
     // Then
     expect(result).toEqual(undefined);
@@ -20,7 +20,7 @@ describe('getCreatorChalkMsg', () => {
     const style = { fontStyle: 'italic' };
 
     // When
-    const result = getCreatorChalkMsg(style);
+    const result = getCreatorColorsMsg(style);
 
     // Then
     expect(result).toBeInstanceOf(Function);
@@ -31,7 +31,7 @@ describe('getCreatorChalkMsg', () => {
     const style = { fontWeight: 'bold' };
 
     // When
-    const result = getCreatorChalkMsg(style);
+    const result = getCreatorColorsMsg(style);
 
     // Then
     expect(result).toBeInstanceOf(Function);
@@ -42,7 +42,7 @@ describe('getCreatorChalkMsg', () => {
     const style = { textDecoration: 'underline' };
 
     // When
-    const result = getCreatorChalkMsg(style);
+    const result = getCreatorColorsMsg(style);
 
     // Then
     expect(result).toBeInstanceOf(Function);
@@ -53,7 +53,7 @@ describe('getCreatorChalkMsg', () => {
     const style = { textDecoration: 'line-through' };
 
     // When
-    const result = getCreatorChalkMsg(style);
+    const result = getCreatorColorsMsg(style);
 
     // Then
     expect(result).toBeInstanceOf(Function);
@@ -64,7 +64,7 @@ describe('getCreatorChalkMsg', () => {
     const style = { visibility: 'hidden' };
 
     // When
-    const result = getCreatorChalkMsg(style);
+    const result = getCreatorColorsMsg(style);
 
     // Then
     expect(result).toBeInstanceOf(Function);
@@ -75,7 +75,7 @@ describe('getCreatorChalkMsg', () => {
     const style = { backgroundColor: 'red' };
 
     // When
-    const result = getCreatorChalkMsg(style);
+    const result = getCreatorColorsMsg(style);
 
     // Then
     expect(result).toBeInstanceOf(Function);
@@ -86,7 +86,7 @@ describe('getCreatorChalkMsg', () => {
     const style = { backgroundColor: 'red', backgroundColorBright: true };
 
     // When
-    const result = getCreatorChalkMsg(style);
+    const result = getCreatorColorsMsg(style);
 
     // Then
     expect(result).toBeInstanceOf(Function);
@@ -97,7 +97,7 @@ describe('getCreatorChalkMsg', () => {
     const style = { color: 'red' };
 
     // When
-    const result = getCreatorChalkMsg(style);
+    const result = getCreatorColorsMsg(style);
 
     // Then
     expect(result).toBeInstanceOf(Function);
@@ -108,7 +108,7 @@ describe('getCreatorChalkMsg', () => {
     const style = { color: 'red', colorBright: true };
 
     // When
-    const result = getCreatorChalkMsg(style);
+    const result = getCreatorColorsMsg(style);
 
     // Then
     expect(result).toBeInstanceOf(Function);

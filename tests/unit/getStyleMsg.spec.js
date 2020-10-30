@@ -174,7 +174,7 @@ describe('getStyleMsg', () => {
       return false;
     });
 
-    seogiRewireAPI.__Rewire__('getCreatorChalkMsg', () => {
+    seogiRewireAPI.__Rewire__('getCreatorColorsMsg', () => {
       return () => message;
     });
 
@@ -186,7 +186,7 @@ describe('getStyleMsg', () => {
 
     seogiRewireAPI.__ResetDependency__('isObject');
     seogiRewireAPI.__ResetDependency__('isBrowser');
-    seogiRewireAPI.__ResetDependency__('getCreatorChalkMsg');
+    seogiRewireAPI.__ResetDependency__('getCreatorColorsMsg');
   });
 
   it('should be return a message of the string type when isIE9ToIE11 is true at a message and style of the array type', () => {
@@ -254,7 +254,7 @@ describe('getStyleMsg', () => {
       return false;
     });
 
-    seogiRewireAPI.__Rewire__('getCreatorChalkMsg', () => {
+    seogiRewireAPI.__Rewire__('getCreatorColorsMsg', () => {
       return () => message[0];
     });
 
@@ -265,6 +265,6 @@ describe('getStyleMsg', () => {
     expect(result).toEqual([`${message[0]} ${message[0]}`]);
 
     seogiRewireAPI.__ResetDependency__('isBrowser');
-    seogiRewireAPI.__ResetDependency__('getCreatorChalkMsg');
+    seogiRewireAPI.__ResetDependency__('getCreatorColorsMsg');
   });
 });
