@@ -1,9 +1,9 @@
 // eslint-disable-next-line
-import { __RewireAPI__ as leaveRewireAPI } from '../../lib';
+import { __RewireAPI__ as seogiRewireAPI } from '../../lib';
 
 describe('report', () => {
   const spy = jest.fn();
-  const report = leaveRewireAPI.__get__('report');
+  const report = seogiRewireAPI.__get__('report');
 
   it('should be call to element of function type', () => {
     // Given
@@ -21,7 +21,7 @@ describe('report', () => {
     const msg = 'test';
 
     const v = [msg];
-    leaveRewireAPI.__Rewire__('log', spy);
+    seogiRewireAPI.__Rewire__('log', spy);
 
     // When
     report(v);
@@ -35,7 +35,7 @@ describe('report', () => {
     const msg = 1;
 
     const v = [msg];
-    leaveRewireAPI.__Rewire__('log', spy);
+    seogiRewireAPI.__Rewire__('log', spy);
 
     // When
     report(v);

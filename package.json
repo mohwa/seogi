@@ -1,6 +1,6 @@
 {
   "name": "seogi",
-  "version": "0.0.15",
+  "version": "1.0.0",
   "description": "This is the library that improved native console API",
   "keywords": [
     "seogi",
@@ -13,7 +13,7 @@
     "webpack-dev-server": "webpack-dev-server --config webpack.config.js",
     "webpack": "webpack --config webpack.config.js",
     "start": "npm run clean && cross-env PHASE=DEV ACTION=DEV_SERVER webpack-dev-server",
-    "build": "npm run clean && npm run lint && npm run test && cross-env PHASE=DEV ACTION=BUILD npm run webpack && cross-env PHASE=PUBLISH ACTION=BUILD npm run webpack",
+    "build": "npm run clean && npm run lint && cross-env PHASE=DEV ACTION=BUILD npm run webpack && cross-env PHASE=PUBLISH ACTION=BUILD npm run webpack",
     "deploy": "npm run build && npm publish",
     "test": "jest --config jest.config.js",
     "lint": "eslint 'examples/**/*' 'lib/**/*' 'tests/**' --fix",
@@ -41,21 +41,16 @@
     "README.md"
   ],
   "homepage": "https://github.com/mohwa/seogi#readme",
-  "dependencies": {
-    "chalk": "^4.1.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.6.2",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-proposal-optional-chaining": "^7.6.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^26.3.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-rewire": "^1.2.0",
     "bundlesize": "^0.18.0",
+    "core-js": "^3.6.5",
     "cross-env": "^6.0.3",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.4.0",
@@ -97,5 +92,8 @@
       "path": "./dist/seogi.min.js",
       "maxSize": "5 kB"
     }
-  ]
+  ],
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
 }

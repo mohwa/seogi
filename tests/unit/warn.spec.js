@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { warn, __RewireAPI__ as leaveRewireAPI } from '../../lib';
+import { warn, __RewireAPI__ as seogiRewireAPI } from '../../lib';
 
 describe('warn', () => {
   let spy;
@@ -11,13 +11,13 @@ describe('warn', () => {
   });
 
   afterEach(() => {
-    leaveRewireAPI.__ResetDependency__(fnName);
+    seogiRewireAPI.__ResetDependency__(fnName);
   });
 
   it('should be have message argument of string type when call to warn method', () => {
     // Given
     const message = 'test';
-    leaveRewireAPI.__Rewire__(fnName, () => [message]);
+    seogiRewireAPI.__Rewire__(fnName, () => [message]);
 
     // When
     warn(message);
@@ -28,7 +28,7 @@ describe('warn', () => {
   it('should be have message argument of number type when call to warn method', () => {
     // Given
     const message = 1;
-    leaveRewireAPI.__Rewire__(fnName, () => [message]);
+    seogiRewireAPI.__Rewire__(fnName, () => [message]);
 
     // When
     warn(message);
@@ -39,7 +39,7 @@ describe('warn', () => {
   it('should be have message argument of boolean type when call to warn method', () => {
     // Given
     const message = false;
-    leaveRewireAPI.__Rewire__(fnName, () => [message]);
+    seogiRewireAPI.__Rewire__(fnName, () => [message]);
 
     // When
     warn(message);
@@ -50,7 +50,7 @@ describe('warn', () => {
   it('should be have message argument of function type when call to warn method', () => {
     // Given
     const message = () => {};
-    leaveRewireAPI.__Rewire__(fnName, () => [message]);
+    seogiRewireAPI.__Rewire__(fnName, () => [message]);
 
     // When
     warn(message);
@@ -61,7 +61,7 @@ describe('warn', () => {
   it('should be have message argument of object type when call to warn method', () => {
     // Given
     const message = {};
-    leaveRewireAPI.__Rewire__(fnName, () => [message]);
+    seogiRewireAPI.__Rewire__(fnName, () => [message]);
 
     // When
     warn(message);
@@ -76,7 +76,7 @@ describe('warn', () => {
     const resultMessage = `%c${message}`;
     const resultStyle = 'color:red';
 
-    leaveRewireAPI.__Rewire__(fnName, () => [resultMessage, ...[resultStyle]]);
+    seogiRewireAPI.__Rewire__(fnName, () => [resultMessage, ...[resultStyle]]);
 
     // When
     warn(message, style);
@@ -91,7 +91,7 @@ describe('warn', () => {
     const resultMessage = `%c${message}`;
     const resultStyle = 'color:red;background-color:green';
 
-    leaveRewireAPI.__Rewire__(fnName, () => [resultMessage, ...[resultStyle]]);
+    seogiRewireAPI.__Rewire__(fnName, () => [resultMessage, ...[resultStyle]]);
 
     // When
     warn(message, style);

@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { log, __RewireAPI__ as leaveRewireAPI } from '../../lib';
+import { log, __RewireAPI__ as seogiRewireAPI } from '../../lib';
 
 describe('log', () => {
   let spy;
@@ -11,13 +11,13 @@ describe('log', () => {
   });
 
   afterEach(() => {
-    leaveRewireAPI.__ResetDependency__(fnName);
+    seogiRewireAPI.__ResetDependency__(fnName);
   });
 
   it('should be have message argument of string type when call to log method', () => {
     // Given
     const message = 'test';
-    leaveRewireAPI.__Rewire__(fnName, () => [message]);
+    seogiRewireAPI.__Rewire__(fnName, () => [message]);
 
     // When
     log(message);
@@ -28,7 +28,7 @@ describe('log', () => {
   it('should be have message argument of number type when call to log method', () => {
     // Given
     const message = 1;
-    leaveRewireAPI.__Rewire__(fnName, () => [message]);
+    seogiRewireAPI.__Rewire__(fnName, () => [message]);
 
     // When
     log(message);
@@ -39,7 +39,7 @@ describe('log', () => {
   it('should be have message argument of boolean type when call to log method', () => {
     // Given
     const message = false;
-    leaveRewireAPI.__Rewire__(fnName, () => [message]);
+    seogiRewireAPI.__Rewire__(fnName, () => [message]);
 
     // When
     log(message);
@@ -50,7 +50,7 @@ describe('log', () => {
   it('should be have message argument of function type when call to log method', () => {
     // Given
     const message = () => {};
-    leaveRewireAPI.__Rewire__(fnName, () => [message]);
+    seogiRewireAPI.__Rewire__(fnName, () => [message]);
 
     // When
     log(message);
@@ -61,7 +61,7 @@ describe('log', () => {
   it('should be have message argument of object type when call to log method', () => {
     // Given
     const message = {};
-    leaveRewireAPI.__Rewire__(fnName, () => [message]);
+    seogiRewireAPI.__Rewire__(fnName, () => [message]);
 
     // When
     log(message);
@@ -76,7 +76,7 @@ describe('log', () => {
     const resultMessage = `%c${message}`;
     const resultStyle = 'color:red';
 
-    leaveRewireAPI.__Rewire__(fnName, () => [resultMessage, ...[resultStyle]]);
+    seogiRewireAPI.__Rewire__(fnName, () => [resultMessage, ...[resultStyle]]);
 
     // When
     log(message, style);
@@ -91,7 +91,7 @@ describe('log', () => {
     const resultMessage = `%c${message}`;
     const resultStyle = 'color:red;background-color:green';
 
-    leaveRewireAPI.__Rewire__(fnName, () => [resultMessage, ...[resultStyle]]);
+    seogiRewireAPI.__Rewire__(fnName, () => [resultMessage, ...[resultStyle]]);
 
     // When
     log(message, style);

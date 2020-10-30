@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { groupCollapsed, __RewireAPI__ as leaveRewireAPI } from '../../lib';
+import { groupCollapsed, __RewireAPI__ as seogiRewireAPI } from '../../lib';
 
 describe('groupCollapsed', () => {
   const groupCollapsedSpy = jest.spyOn(console, 'groupCollapsed');
@@ -16,8 +16,8 @@ describe('groupCollapsed', () => {
     const getStyleMsgSpy = jest.fn(() => v);
     const reportSpy = jest.fn();
 
-    leaveRewireAPI.__Rewire__('getStyleMsg', getStyleMsgSpy);
-    leaveRewireAPI.__Rewire__('report', reportSpy);
+    seogiRewireAPI.__Rewire__('getStyleMsg', getStyleMsgSpy);
+    seogiRewireAPI.__Rewire__('report', reportSpy);
 
     // When
     groupCollapsed(v, label, style);

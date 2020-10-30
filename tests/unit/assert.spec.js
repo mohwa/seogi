@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { assert, __RewireAPI__ as leaveRewireAPI } from '../../lib';
+import { assert, __RewireAPI__ as seogiRewireAPI } from '../../lib';
 
 describe('assert', () => {
   let spy;
@@ -7,11 +7,11 @@ describe('assert', () => {
 
   beforeEach(() => {
     spy = jest.fn();
-    leaveRewireAPI.__Rewire__(fnName, spy);
+    seogiRewireAPI.__Rewire__(fnName, spy);
   });
 
   afterEach(() => {
-    leaveRewireAPI.__ResetDependency__(fnName);
+    seogiRewireAPI.__ResetDependency__(fnName);
   });
 
   it('should be call to log method if true result value of assertion function', () => {

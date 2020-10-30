@@ -17,7 +17,13 @@ const {
   groupCollapsedTable,
 } = require('../../lib');
 
-log('Hello World', { color: 'white', backgroundColor: 'green', fontWeight: 'bold', fontSize: '10px' });
+log('Hello World');
+log(['Hello', 'World']);
+log('Hello World', { color: 'red', backgroundColor: 'cyan', fontWeight: 'bold', fontSize: '10px' });
+log(['Hello', 'World'], { color: 'cyan', backgroundColor: 'yellow' });
+log(['Hello', 'World'], [{ color: 'magenta', backgroundColor: 'blue' }]);
+log(['Hello', 'World'], [{ color: 'blue', backgroundColor: 'magenta' }, { color: 'cyan' }]);
+
 error('Hello World', { color: 'cyan', backgroundColor: 'yellow', textDecoration: 'underline', fontSize: '20px' });
 warn('Hello World', { color: 'magenta', backgroundColor: 'blue', textDecoration: 'line-through', fontSize: '30px' });
 info('Hello World', { color: 'blue', backgroundColor: 'magenta', fontStyle: 'italic', fontSize: '40px' });

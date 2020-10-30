@@ -42,6 +42,10 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         include: [libPath, examplePath],
+        // include: [libPath, examplePath],
+        options: {
+          configFile: resolve('.babelrc'),
+        },
       },
     ],
   },

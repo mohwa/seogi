@@ -1,8 +1,8 @@
 // eslint-disable-next-line
-import { __RewireAPI__ as leaveRewireAPI } from '../../lib';
+import { __RewireAPI__ as seogiRewireAPI } from '../../lib';
 
 describe('getCreatorChalkMsg', () => {
-  const getCreatorChalkMsg = leaveRewireAPI.__get__('getCreatorChalkMsg');
+  const getCreatorChalkMsg = seogiRewireAPI.__get__('getCreatorChalkMsg');
 
   it('should be return undefined when not there is some style attributes', () => {
     // Given

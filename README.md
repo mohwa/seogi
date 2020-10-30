@@ -10,12 +10,18 @@ npm i seogi
 
 # Support Platforms
 
-All Browsers, NodeJS
+IE9 later, All modern browsers(Chrome, Safari, Edge ...), NodeJS(`12.0.0` version later).
 
 ## Normal API
 
 ```javascript
-log('Hello World', { color: 'white', backgroundColor: 'green', fontWeight: 'bold', fontSize: '10px' });
+log('Hello World');
+log(['Hello', 'World']);
+log('Hello World', { color: 'red', backgroundColor: 'cyan', fontWeight: 'bold', fontSize: '10px' });
+log(['Hello', 'World'], { color: 'cyan', backgroundColor: 'yellow' });
+log(['Hello', 'World'], [{ color: 'magenta', backgroundColor: 'blue' }]);
+log(['Hello', 'World'], [{ color: 'blue', backgroundColor: 'magenta' }, { color: 'cyan' }]);
+
 error('Hello World', { color: 'cyan', backgroundColor: 'yellow', textDecoration: 'underline', fontSize: '20px' });
 warn('Hello World', { color: 'magenta', backgroundColor: 'blue', textDecoration: 'line-through', fontSize: '30px' });
 info('Hello World', { color: 'blue', backgroundColor: 'magenta', fontStyle: 'italic', fontSize: '40px' });
@@ -26,11 +32,14 @@ assert(() => true /* or false */, 'Hello World', {
 });
 ```
 
-![seogi_1](https://user-images.githubusercontent.com/11391606/94977011-dccf6000-0551-11eb-820f-052f29fd5e8c.png)
+![seogi_1](https://user-images.githubusercontent.com/11391606/97726770-f1802300-1b12-11eb-969b-67b0d79fc10e.png)
+
 
 ## Object Type API
 
-This api include argument of object type and it same to console api
+This api include argument of object type and it same to console api.
+
+- `table` API will be unable to using at IE browser and instead will be using `log` API.
 
 ```javascript
 dir({ x: 1 });
@@ -40,6 +49,8 @@ table({ x: 1, y: 2 });
 ![seogi_2](https://user-images.githubusercontent.com/11391606/94977014-de992380-0551-11eb-8c33-7818ffab8431.png)
 
 ## Group Type API
+
+`Group Type API` will be unable to using at the IE9 and IE10 browser because browser compatibility issues.
 
 ```javascript
 group(
@@ -67,6 +78,8 @@ groupTable({ x: 1, y: 2 }, 'GROUP TABLE', { color: 'magenta' });
 ![seogi_3](https://user-images.githubusercontent.com/11391606/94977015-df31ba00-0551-11eb-9a9f-c411ab91dd09.png)
 
 ## Group Collapsed Type API
+
+`Group Collapsed Type API` will be unable to using at the IE9 and IE10 browser because browser compatibility issues.
 
 ```javascript
 groupCollapsed(
@@ -97,14 +110,26 @@ groupCollapsedTable({ x: 1, y: 2 }, 'GROUP COLLAPSED TABLE', { color: 'blue' });
 
 ## On NodeJS Environment
 
-This library used [chalk library](https://github.com/chalk/chalk) that expression color on the NodeJS
+<s>This library used [chalk library](https://github.com/chalk/chalk) that expression color on the NodeJS.
 
-You can check color list that you can use in [this link](<(https://github.com/chalk/chalk)>) and you can use like following codes all feature of the chalk library.
+You can check color list that you can use in [this link](<(https://github.com/chalk/chalk)>) and you can use like following codes all feature of the chalk library.</s>
+
+This library used [colors.js library](https://github.com/Marak/colors.js) that expression color on the NodeJS.
+
+You can check color list that you can use in [this link](<(https://github.com/Marak/colors.js)>) and you can use like following codes all feature of the colors.js library.
+
+- I changed chalk library to colors.js library because [polyfill issue](https://github.com/jaredpalmer/razzle/issues/998) at `0.0.15` version.
 
 ## Normal API
 
 ```javascript
-log('Hello World', { color: 'white', backgroundColor: 'green', fontWeight: 'bold' });
+log('Hello World');
+log(['Hello', 'World']);
+log('Hello World', { color: 'red', backgroundColor: 'cyan', fontWeight: 'bold', fontSize: '10px' });
+log(['Hello', 'World'], { color: 'cyan', backgroundColor: 'yellow' });
+log(['Hello', 'World'], [{ color: 'magenta', backgroundColor: 'blue' }]);
+log(['Hello', 'World'], [{ color: 'blue', backgroundColor: 'magenta' }, { color: 'cyan' }]);
+
 error('Hello World', { color: 'cyan', backgroundColor: 'yellow', textDecoration: 'underline' });
 warn('Hello World', { color: 'magenta', backgroundColor: 'blue' });
 info('Hello World', { color: 'blue', backgroundColor: 'magenta', fontStyle: 'italic', backgroundColorBright: true });
@@ -114,12 +139,12 @@ assert(() => true /* or false */, 'Hello World', {
 });
 ```
 
-<img width="154" alt="seogi_5" src="https://user-images.githubusercontent.com/11391606/94977018-e0fb7d80-0551-11eb-9acd-51610a6378c9.png">
+<img width="154" alt="seogi_5" src="https://user-images.githubusercontent.com/11391606/97727008-36a45500-1b13-11eb-8644-fd1fbd08e7d4.png">
 
 ## Object Type API
 
 This api include argument of object type and it same to console api
-
+ 
 ```javascript
 dir({ x: 1 });
 table({ x: 1, y: 2 });
