@@ -117,7 +117,7 @@ This library used [colors.js library](https://github.com/Marak/colors.js) that e
 
 You can check color list that you can use in [this link](<(https://github.com/Marak/colors.js)>) and you can use like following codes all feature of the colors.js library.
 
-- I changed chalk library to colors.js library because [polyfill issue](https://github.com/jaredpalmer/razzle/issues/998) at `0.0.15` version.
+- I changed chalk library to colors.js library because [polyfill issue](https://github.com/jaredpalmer/razzle/issues/998) happened at `0.0.15` version.
 
 ## Normal API
 
