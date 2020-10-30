@@ -207,7 +207,6 @@ groupCollapsedTable({ x: 1, y: 2 }, 'GROUP COLLAPSED TABLE', { color: 'blue' });
 
 <img width="250" alt="seogi_8" src="https://user-images.githubusercontent.com/11391606/94977021-e22caa80-0551-11eb-9ee7-b35e4a0dbc84.png">
 
-
 ## getStyleMsg API
 
 If you will make an arguments that will send to the native api, you can use a `getStyleMsg API`
