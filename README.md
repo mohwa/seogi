@@ -34,7 +34,6 @@ assert(() => true /* or false */, 'Hello World', {
 
 ![seogi_1](https://user-images.githubusercontent.com/11391606/97726770-f1802300-1b12-11eb-969b-67b0d79fc10e.png)
 
-
 ## Object Type API
 
 This api include argument of object type and it same to console api.
@@ -144,7 +143,7 @@ assert(() => true /* or false */, 'Hello World', {
 ## Object Type API
 
 This api include argument of object type and it same to console api
- 
+
 ```javascript
 dir({ x: 1 });
 table({ x: 1, y: 2 });
