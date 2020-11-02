@@ -1,4 +1,4 @@
-const {
+import {
   log,
   error,
   warn,
@@ -16,7 +16,7 @@ const {
   groupCollapsedDir,
   groupCollapsedTable,
   getStyleMsg,
-} = require('../../lib');
+} from '../../lib';
 
 log('Hello World');
 log(['Hello', 'World']);
