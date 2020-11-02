@@ -13,7 +13,7 @@ const isDev = PHASE === 'DEV';
 const isDevServer = ACTION === 'DEV_SERVER';
 const mode = isDev ? 'development' : 'production';
 const libPath = resolve('lib', 'index.js');
-const examplePath = resolve('examples/browser', 'index.js');
+const examplePath = resolve('examples', 'index.js');
 
 module.exports = {
   context: ROOT_PATH,

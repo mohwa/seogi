@@ -16,7 +16,7 @@ import {
   groupCollapsedDir,
   groupCollapsedTable,
   getStyleMsg,
-} from '../../lib';
+} from '../lib';
 
 log('Hello World');
 log(['Hello', 'World']);
