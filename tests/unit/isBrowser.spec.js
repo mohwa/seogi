@@ -1,12 +1,12 @@
 // eslint-disable-next-line
-import { __RewireAPI__ as seogiRewireAPI } from '../../lib';
+import { __RewireAPI__ as seogiRewireUtils } from '../../lib/utils';
 import { setMockOfWindowObject } from '../utils';
 
 describe('isBrowser', () => {
   it('should be return a true', () => {
     // Given
     setMockOfWindowObject({});
-    const isBrowser = seogiRewireAPI.__get__('isBrowser');
+    const isBrowser = seogiRewireUtils.__get__('isBrowser');
     // When
     const result = isBrowser();
     // Then
@@ -16,7 +16,7 @@ describe('isBrowser', () => {
   it('should be return a false', () => {
     // Given
     setMockOfWindowObject(undefined);
-    const isBrowser = seogiRewireAPI.__get__('isBrowser');
+    const isBrowser = seogiRewireUtils.__get__('isBrowser');
     // When
     const result = isBrowser();
     // Then

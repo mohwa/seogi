@@ -12,7 +12,8 @@ const { PHASE, ACTION } = process.env;
 const isDev = PHASE === 'DEV';
 const isDevServer = ACTION === 'DEV_SERVER';
 const mode = isDev ? 'development' : 'production';
-const libPath = resolve('lib', 'index.js');
+const libPath = resolve('lib');
+const indexPath = resolve('lib', 'index.js');
 const examplePath = resolve('examples', 'index.js');
 
 module.exports = {
@@ -20,7 +21,7 @@ module.exports = {
   target: 'web',
   mode,
   entry: {
-    seogi: libPath,
+    seogi: indexPath,
     ...(isDevServer ? { index: examplePath } : {}),
   },
   output: {
@@ -34,7 +35,6 @@ module.exports = {
   resolve: {
     modules: ['src', 'node_modules'],
     extensions: ['.js'],
-    fallback: { os: false },
   },
   module: {
     rules: [

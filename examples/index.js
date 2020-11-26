@@ -16,6 +16,7 @@ import {
   groupCollapsedDir,
   groupCollapsedTable,
   getStyleMsg,
+  image,
 } from '../lib';
 
 log('Hello World');
@@ -89,3 +90,35 @@ console.log(
 console.log(...getStyleMsg(['Hello', 'World'], { color: 'cyan', backgroundColor: 'yellow' }));
 console.log(...getStyleMsg(['Hello', 'World'], [{ color: 'magenta', backgroundColor: 'blue' }]));
 console.log(...getStyleMsg(['Hello', 'World'], [{ color: 'blue', backgroundColor: 'magenta' }, { color: 'cyan' }]));
+
+image('https://pubpress.net/houseads/2018/03/15/wordads/3-8-300x250.png', {
+  text: 'Hello World1',
+  x: 15,
+  y: 100,
+  color: 'azure',
+  font: 'bold 48px serif',
+});
+
+image('https://pubpress.net/houseads/2018/03/15/wordads/3-8-300x250.png', {
+  text: 'Hello World2',
+  color: 'azure',
+  font: '48px serif',
+});
+
+image('https://pubpress.net/houseads/2018/03/15/wordads/3-8-300x250.png', {
+  text: 'Hello World3',
+  color: 'azure',
+  font: '48px serif',
+});
+
+image('https://pubpress.net/houseads/2018/03/15/wordads/3-8-300x250.png', {
+  text: 'Hello World4',
+  color: 'azure',
+  font: '48px serif',
+});
+
+image('https://pubpress.net/houseads/2018/03/15/wordads/3-8-300x250.png', {
+  text: 'Hello World5',
+  color: 'azure',
+  font: '48px serif',
+});

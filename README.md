@@ -143,6 +143,30 @@ groupCollapsedTable({ x: 1, y: 2 }, 'GROUP COLLAPSED TABLE', { color: 'blue' });
 
 ![seogi_4](https://user-images.githubusercontent.com/11391606/94977017-e062e700-0551-11eb-8143-c5d622d3dce7.png)
 
+## Media Type API
+
+`Image API` can use at only browser that supported canvas api
+
+```javascript
+import { image } from 'seogi';
+
+image('https://pubpress.net/houseads/2018/03/15/wordads/3-8-300x250.png', {
+  text: 'Hello World1',
+  x: 15,
+  y: 100,
+  color: 'azure',
+  font: 'bold 48px serif',
+});
+
+image('https://pubpress.net/houseads/2018/03/15/wordads/3-8-300x250.png', {
+  text: 'Hello World2',
+  color: 'azure',
+  font: '48px serif',
+});
+```
+
+<img width="340" alt="Webpack App 2020-11-26 15-04-38" src="https://user-images.githubusercontent.com/11391606/100313891-d82aa380-2ff8-11eb-9377-29abddd3942c.png">
+
 ## On NodeJS Environment
 
 <s>This library used [chalk library](https://github.com/chalk/chalk) that expression color on the NodeJS.

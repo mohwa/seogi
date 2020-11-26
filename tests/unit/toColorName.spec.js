@@ -1,11 +1,11 @@
 // eslint-disable-next-line
-import { __RewireAPI__ as seogiRewireAPI } from '../../lib';
+import { __RewireAPI__ as seogiRewireUtils } from '../../lib/utils';
 
 describe('toColorName', () => {
   it('should be return a `Red` if `red`', () => {
     // Given
     const value = 'red';
-    const toColorName = seogiRewireAPI.__get__('toColorName');
+    const toColorName = seogiRewireUtils.__get__('toColorName');
     // When
     const result = toColorName(value);
     // Then
@@ -15,7 +15,7 @@ describe('toColorName', () => {
   it('should be return a `Blue` if `blue`', () => {
     // Given
     const value = 'blue';
-    const toColorName = seogiRewireAPI.__get__('toColorName');
+    const toColorName = seogiRewireUtils.__get__('toColorName');
     // When
     const result = toColorName(value);
     // Then

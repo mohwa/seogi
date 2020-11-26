@@ -1,9 +1,7 @@
 // eslint-disable-next-line
-import { __RewireAPI__ as seogiRewireAPI } from '../../lib';
+import { getCreatorColorsMsg } from '../../lib/utils';
 
 describe('getCreatorColorsMsg', () => {
-  const getCreatorColorsMsg = seogiRewireAPI.__get__('getCreatorColorsMsg');
-
   it('should be return undefined when not there is some style attributes', () => {
     // Given
     const style = { fontSize: '17px' };

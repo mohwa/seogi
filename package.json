@@ -1,6 +1,6 @@
 {
   "name": "seogi",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "This is the library that improved native console API",
   "keywords": [
     "seogi",
@@ -15,7 +15,7 @@
     "start": "npm run clean && cross-env PHASE=DEV ACTION=DEV_SERVER webpack-dev-server",
     "start:node": "babel-node ./examples",
     "build": "npm run clean && cross-env PHASE=DEV ACTION=BUILD npm run webpack && cross-env PHASE=PUBLISH ACTION=BUILD npm run webpack",
-    "deploy": "npm run lint && npm run test && npm run build && npm publish && npm run clean",
+    "deploy": "npm run lint && npm run test && npm run build && npm run doc && npm publish && npm run clean",
     "test": "jest --config jest.config.js",
     "lint": "eslint examples/**/* lib/**/* scripts/**/* tests/**/* --fix",
     "clean": "rimraf dist",
@@ -67,17 +67,17 @@
     "lint-staged": "^9.4.2",
     "prettier-eslint": "^9.0.0",
     "rimraf": "^3.0.0",
-    "webpack": "^5.6.0",
+    "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.8.2"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && npm run test && npm run doc"
+      "pre-commit": "lint-staged && npm run test"
     }
   },
   "lint-staged": {
-    "!(*docs).{js, md}": [
+    "*.js": [
       "eslint --fix",
       "git add"
     ]
@@ -88,11 +88,11 @@
   "bundlesize": [
     {
       "path": "./dist/seogi.js",
-      "maxSize": "10 kB"
+      "maxSize": "500 kB"
     },
     {
       "path": "./dist/seogi.min.js",
-      "maxSize": "5 kB"
+      "maxSize": "500 kB"
     }
   ],
   "browserslist": [

@@ -1,9 +1,7 @@
 // eslint-disable-next-line
-import { __RewireAPI__ as seogiRewireAPI } from '../../lib';
+import { getStyleInfo } from '../../lib/utils';
 
 describe('getStyleInfo', () => {
-  const getStyleInfo = seogiRewireAPI.__get__('getStyleInfo');
-
   it('should be return style with one property', () => {
     // Given
     const style = { color: 'red' };
