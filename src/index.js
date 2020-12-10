@@ -368,7 +368,7 @@ export function image(v, option) {
   }
 }
 
-export default Object.freeze({
+export default {
   getStyleMsg,
   log,
   error,
@@ -387,4 +387,4 @@ export default Object.freeze({
   groupCollapsedTable,
   groupCollapsedDir,
   image,
-});
+};
