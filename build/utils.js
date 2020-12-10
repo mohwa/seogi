@@ -20,7 +20,7 @@ export function mergeEntryConfig(options = {}) {
       ...output,
     },
     plugins: [
-      babel({ runtimeHelpers: true }),
+      babel({ exclude: 'node_modules/**' }),
       nodeResolve(),
       commonjs({
         include: 'node_modules/**/*',

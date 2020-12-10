@@ -4,7 +4,7 @@ module.exports = {
   moduleDirectories: ['node_modules'],
   moduleFileExtensions: ['js'],
   transform: {
-    '^.+\\.(js|jsx)?$': 'babel-jest',
+    '^.+\\.(js|jsx)?$': ['babel-jest', { configFile: './.babelrc-test' }],
   },
   transformIgnorePatterns: ['<rootDir>/node_modules/'],
 };
