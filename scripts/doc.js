@@ -4,7 +4,7 @@ import documentation from 'documentation';
 import streamArray from 'stream-array';
 import vfs from 'vinyl-fs';
 
-const filePath = path.resolve('lib/index.js');
+const filePath = path.resolve('src/index.js');
 
 documentation.lint(filePath, {}).then(lintOutput => {
   if (lintOutput) {
