@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { table } from '../../lib';
+import { table } from '../../src';
 
 describe('table', () => {
   let spy;

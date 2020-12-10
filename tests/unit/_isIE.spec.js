@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { __RewireAPI__ as seogiRewireUtils } from '../../lib/utils';
+import { __RewireAPI__ as seogiRewireUtils } from '../../src/utils';
 import { setMockOfWindowObject } from '../utils';
 
 describe('_isIE', () => {

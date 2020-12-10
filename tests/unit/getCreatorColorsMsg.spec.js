@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { getCreatorColorsMsg } from '../../lib/utils';
+import { getCreatorColorsMsg } from '../../src/utils';
 
 describe('getCreatorColorsMsg', () => {
   it('should be return undefined when not there is some style attributes', () => {

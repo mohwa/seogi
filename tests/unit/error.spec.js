@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { error, __RewireAPI__ as seogiRewireAPI } from '../../lib';
+import { error, __RewireAPI__ as seogiRewireAPI } from '../../src';
 
 describe('error', () => {
   let spy;

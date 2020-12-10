@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { __RewireAPI__ as seogiRewireAPI } from '../../lib';
+import { __RewireAPI__ as seogiRewireAPI } from '../../src';
 
 describe('report', () => {
   const spy = jest.fn();

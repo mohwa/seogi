@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { __RewireAPI__ as seogiRewireUtils } from '../../lib/utils';
+import { __RewireAPI__ as seogiRewireUtils } from '../../src/utils';
 
 describe('toColorName', () => {
   it('should be return a `Red` if `red`', () => {

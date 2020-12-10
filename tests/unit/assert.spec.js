@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { assert, __RewireAPI__ as seogiRewireAPI } from '../../lib';
+import { assert, __RewireAPI__ as seogiRewireAPI } from '../../src';
 
 describe('assert', () => {
   let spy;

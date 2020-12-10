@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { group, __RewireAPI__ as seogiRewireAPI } from '../../lib';
+import { group, __RewireAPI__ as seogiRewireAPI } from '../../src';
 
 describe('group', () => {
   const groupSpy = jest.spyOn(console, 'group');

@@ -1,4 +1,4 @@
-import { dir } from '../../lib';
+import { dir } from '../../src';
 
 describe('dir', () => {
   let spy;

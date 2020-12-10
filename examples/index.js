@@ -17,7 +17,7 @@ import {
   groupCollapsedTable,
   getStyleMsg,
   image,
-} from '../lib';
+} from '../src/index';
 
 log('Hello World');
 log(['Hello', 'World']);
@@ -91,7 +91,7 @@ console.log(...getStyleMsg(['Hello', 'World'], { color: 'cyan', backgroundColor:
 console.log(...getStyleMsg(['Hello', 'World'], [{ color: 'magenta', backgroundColor: 'blue' }]));
 console.log(...getStyleMsg(['Hello', 'World'], [{ color: 'blue', backgroundColor: 'magenta' }, { color: 'cyan' }]));
 
-image('https://pubpress.net/houseads/2018/03/15/wordads/3-8-300x250.png', {
+image('https://s.pstatic.net/static/www/mobile/edit/2020/1209/cropImg_728x360_49435602001601021.jpeg', {
   text: 'Hello World1',
   x: 15,
   y: 100,
@@ -99,25 +99,25 @@ image('https://pubpress.net/houseads/2018/03/15/wordads/3-8-300x250.png', {
   font: 'bold 48px serif',
 });
 
-image('https://pubpress.net/houseads/2018/03/15/wordads/3-8-300x250.png', {
+image('https://s.pstatic.net/static/www/mobile/edit/2020/1209/cropImg_728x360_49435602001601021.jpeg', {
   text: 'Hello World2',
   color: 'azure',
   font: '48px serif',
 });
 
-image('https://pubpress.net/houseads/2018/03/15/wordads/3-8-300x250.png', {
+image('https://s.pstatic.net/static/www/mobile/edit/2020/1209/cropImg_728x360_49435602001601021.jpeg', {
   text: 'Hello World3',
   color: 'azure',
   font: '48px serif',
 });
 
-image('https://pubpress.net/houseads/2018/03/15/wordads/3-8-300x250.png', {
+image('https://s.pstatic.net/static/www/mobile/edit/2020/1209/cropImg_728x360_49435602001601021.jpeg', {
   text: 'Hello World4',
   color: 'azure',
   font: '48px serif',
 });
 
-image('https://pubpress.net/houseads/2018/03/15/wordads/3-8-300x250.png', {
+image('https://s.pstatic.net/static/www/mobile/edit/2020/1209/cropImg_728x360_49435602001601021.jpeg', {
   text: 'Hello World5',
   color: 'azure',
   font: '48px serif',

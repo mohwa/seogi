@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { getStyleInfo } from '../../lib/utils';
+import { getStyleInfo } from '../../src/utils';
 
 describe('getStyleInfo', () => {
   it('should be return style with one property', () => {
