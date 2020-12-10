@@ -1,6 +1,6 @@
 {
   "name": "seogi",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "This is the library that improved native console API",
   "keywords": [
     "seogi",
@@ -38,8 +38,8 @@
   },
   "files": [
     "dist",
-    "index.js",
-    "README.md"
+    "README.md",
+    "LICENSE.md"
   ],
   "homepage": "https://github.com/mohwa/seogi#readme",
   "devDependencies": {
