@@ -12,18 +12,21 @@ documentation.lint(filePath, {}).then(lintOutput => {
     process.exit(1);
   } else {
     documentation
-      .build(filePath, {})
+      .build(filePath, { shallow: true })
       .then(documentation.formats.html)
       .then(output => {
-        streamArray(output).pipe(vfs.dest('./docs'));
+        const reader = streamArray(output);
 
-        const lastCommandArgs = [['pull'], ['commit', '-am', '"Update new doc"'], ['push', '--force']];
+        reader.pipe(vfs.dest('./docs'));
+        reader.on('end', () => {
+          const lastCommandArgs = [['pull'], ['commit', '-am', '"Update new doc"'], ['push', '--force']];
 
-        setTimeout(() => {
-          lastCommandArgs.forEach(v => {
-            spawnSync('git', v, { stdio: 'inherit', shell: true });
-          });
-        }, 500);
+          setTimeout(() => {
+            lastCommandArgs.forEach(v => {
+              spawnSync('git', v, { stdio: 'inherit', shell: true });
+            });
+          }, 500);
+        });
       });
   }
 });
