@@ -36,6 +36,6 @@ jobs:
           # User defined upload name. Visible in Codecov UI
           name: seogi
           # Path to coverage file to upload
-          file: ./tests/coverage
+          file: coverage
         env:
           CODECOV_TOKEN: 12bc5c26-ecec-4fee-aebe-c9907ce87048
