@@ -8,6 +8,5 @@ module.exports = {
   },
   transformIgnorePatterns: ['<rootDir>/node_modules/'],
   collectCoverage: true,
-  coverageDirectory: '<rootDir>/coverage/',
-  coverageReporters: ['text'],
+  coverageDirectory: 'coverage',
 };
