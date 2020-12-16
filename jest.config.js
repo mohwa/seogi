@@ -7,4 +7,6 @@ module.exports = {
     '^.+\\.(js|jsx)?$': ['babel-jest', { configFile: './.babelrc-test' }],
   },
   transformIgnorePatterns: ['<rootDir>/node_modules/'],
+  collectCoverage: true,
+  coverageDirectory: '<rootDir>/tests/coverage',
 };
