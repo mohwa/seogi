@@ -29,9 +29,10 @@ jobs:
         with:
           node-version: '12.x'
           check-latest: true
+          registry-url: https://registry.npmjs.org/
       - name: Install packages
         run: npm i
       - name: Publish npm package
         run: npm run deploy
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
