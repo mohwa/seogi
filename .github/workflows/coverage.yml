@@ -28,6 +28,11 @@ jobs:
         run: npm install
       - name: npm run test
         run: npm run test
+      - name: ls -al
+        run: ls -al
+      - uses: actions/download-artifact@v1
+        with:
+          name: coverage
       - name: codecov-action
         # You may pin to the exact commit or the version.
         # uses: codecov/codecov-action@239febf655bba88b16ff5dea1d3135ea8663a1f9
