@@ -1,5 +1,5 @@
 codecov:
-  token: "12bc5c26-ecec-4fee-aebe-c9907ce87048"
+#  token: "12bc5c26-ecec-4fee-aebe-c9907ce87048"
   bot: "codecov-io"
   strict_yaml_branch: "master"
   max_report_age: off
