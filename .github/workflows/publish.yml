@@ -29,7 +29,6 @@ jobs:
         with:
           node-version: '12.x'
           check-latest: true
-          registry-url: https://registry.npmjs.org/
       - name: Install packages
         run: npm i
       - name: Publish npm package
