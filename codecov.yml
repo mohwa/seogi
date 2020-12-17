@@ -1,0 +1,10 @@
+codecov:
+  token: "12bc5c26-ecec-4fee-aebe-c9907ce87048"
+  bot: "codecov-io"
+  strict_yaml_branch: "master"
+  max_report_age: off
+  disable_default_path_fixes: no
+  require_ci_to_pass: yes
+  notify:
+    after_n_builds: 2
+    wait_for_ci: yes
