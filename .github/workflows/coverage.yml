@@ -32,7 +32,6 @@ jobs:
         run: ls -al
       - uses: actions/download-artifact@v1
         with:
-          name: coverage
           path: coverage
       - name: codecov-action
         # You may pin to the exact commit or the version.
