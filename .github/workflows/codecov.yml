@@ -28,11 +28,12 @@ jobs:
         run: npm install
       - name: npm run test
         run: npm run test
+      - name: ls -al
+        run: ls -al
       - name: codecov-action
         # You may pin to the exact commit or the version.
         # uses: codecov/codecov-action@239febf655bba88b16ff5dea1d3135ea8663a1f9
-#        uses: codecov/codecov-action@v1.0.15
-        run: ls -al
+        uses: codecov/codecov-action@v1.0.15
         with:
           # User defined upload name. Visible in Codecov UI
           name: seogi
