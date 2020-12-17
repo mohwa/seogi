@@ -1,6 +1,6 @@
 {
   "name": "seogi",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "This is the library that improved native console API",
   "keywords": [
     "seogi",
@@ -17,7 +17,7 @@
     "build": "npm run clean && rollup -c ./build/rollup.config.js",
     "deploy": "npm run lint && npm run test && npm run build && npm run doc && npm publish && npm run clean",
     "test": "jest --config jest.config.js",
-    "coverage": "jest --config jest.config.js --ci --coverage && codecov",
+    "coverage": "jest --config jest.config.js --ci --coverage",
     "lint": "eslint examples/**/* src/**/* scripts/**/* tests/**/* --fix",
     "clean": "rimraf dist",
     "doc": "babel-node scripts/doc.js"

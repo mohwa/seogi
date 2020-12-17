@@ -1,6 +1,6 @@
 # seogi
 
-![npm](https://img.shields.io/npm/v/seogi) [![](https://data.jsdelivr.com/v1/package/npm/seogi/badge)](https://www.jsdelivr.com/package/npm/seogi) ![npm bundle size](https://img.shields.io/bundlephobia/min/seogi) ![npm](https://img.shields.io/npm/dm/seogi) ![NPM](https://img.shields.io/npm/l/seogi)
+![npm](https://img.shields.io/npm/v/seogi) [![](https://data.jsdelivr.com/v1/package/npm/seogi/badge)](https://www.jsdelivr.com/package/npm/seogi) ![Codecov](https://img.shields.io/codecov/c/github/mohwa/seogi) ![npm bundle size](https://img.shields.io/bundlephobia/min/seogi) ![npm](https://img.shields.io/npm/dm/seogi) ![NPM](https://img.shields.io/npm/l/seogi)
 
 This library improved use way console api so you will able to use them more better and more simplity and you can use similarly like existing console api.
 
