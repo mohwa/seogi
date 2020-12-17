@@ -25,7 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: codecov install
-        run: npm install -g codecov
+        run: npm install codecov
       - name: npm install
         run: npm install
       - name: npm run coverage
