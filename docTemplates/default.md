@@ -6,8 +6,6 @@ This library improved use way console api so you will able to use them more bett
 
 [Example code on the CodePen](https://codepen.io/yanione/pen/abZjRVj?editors=0011)
 
-[API Documentation](https://mohwa.github.io/seogi/)
-
 > You will able to see related log on the console tab of your browser.
 
 # Install
