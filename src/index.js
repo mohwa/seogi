@@ -1,5 +1,5 @@
 import colors from 'colors/safe';
-import { type } from 'emnida';
+import { isPlainObject, isFunction, isArray } from 'emnida';
 import {
   isBrowser,
   getStyleInfo,
@@ -10,8 +10,6 @@ import {
   supportsCanvas,
   asyncToSync,
 } from './utils';
-
-const { isPlainObject, isFunction, isArray } = type;
 
 const DEFAULT_LABEL = {
   label: 'group',

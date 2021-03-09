@@ -1,7 +1,5 @@
 import colors from 'colors/safe';
-import { type } from 'emnida';
-
-const { isFunction } = type;
+import { isFunction } from 'emnida';
 
 function toColorName(v) {
   const firstChar = v.substr(0, 1);
