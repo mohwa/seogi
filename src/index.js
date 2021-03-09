@@ -127,8 +127,8 @@ export function getStyleMsg(msg, style) {
 
 /**
  * Write log message on the console tab
- * @param {string|string[]} [msg] console message
- * @param {Object|Object[]} [style] style object
+ * @param {string|string[]} msg console message
+ * @param {Object|Object[]} style style object
  * @example
  * log('Hello World', { color: 'red' });
  */
@@ -138,8 +138,8 @@ export function log(msg, style) {
 
 /**
  * Write error message on the console tab
- * @param {string|string[]} [msg] console message
- * @param {Object|Object[]} [style] style object
+ * @param {string|string[]} msg console message
+ * @param {Object|Object[]} style style object
  * @example
  * error('Hello World', { color: 'red' });
  */
@@ -149,8 +149,8 @@ export function error(msg, style) {
 
 /**
  * Write warn message on the console tab
- * @param {string|string[]} [msg] console message
- * @param {Object|Object[]} [style] style object
+ * @param {string|string[]} msg console message
+ * @param {Object|Object[]} style style object
  * @example
  * warn('Hello World', { color: 'red' });
  */
@@ -160,8 +160,8 @@ export function warn(msg, style) {
 
 /**
  * Write information message on the console tab
- * @param {string|string[]} [msg] console message
- * @param {Object|Object[]} [style] style object
+ * @param {string|string[]} msg console message
+ * @param {Object|Object[]} style style object
  * @example
  * info('Hello World', { color: 'red' });
  */
@@ -172,8 +172,8 @@ export function info(msg, style) {
 /**
  * Write debug message on the console tab
  * It will be call the log api without style at only IE9 to IE10 browser
- * @param {string|string[]} [msg] console message
- * @param {Object|Object[]} [style] style object
+ * @param {string|string[]} msg console message
+ * @param {Object|Object[]} style style object
  * @example
  * debug('Hello World', { color: 'red' });
  */
@@ -188,23 +188,23 @@ export function debug(msg, style) {
 /**
  * Write object information on the console tab
  * It will be call a log api at only IE10 browser
- * @param {Object} [v] object value
+ * @param {Object} value An any value
  * @example
  * dir({ x: 1 });
  */
-export function dir(v) {
+export function dir(value) {
   if (isIE(10)) {
-    log(JSON.stringify(v));
+    log(JSON.stringify(value));
   } else {
-    console.dir(v);
+    console.dir(value);
   }
 }
 
 /**
  * Write log message on the console tab when return true by assertion function
- * @param {Function} [assertion] assertion function
- * @param {string|string[]} [msg] console message
- * @param {Object|Object[]} [style] style object
+ * @param {Function} assertion assertion function
+ * @param {string|string[]} msg console message
+ * @param {Object|Object[]} style style object
  * @example
  * assert(() => true, 'Hello World');
  */
@@ -218,31 +218,31 @@ export function assert(assertion, msg, style) {
 
 /**
  * Write object information in the table
- * @param {Object} [v] object value
+ * @param {Object} value An any value
  * @example
  * table({ x: 1 });
  */
-export function table(v) {
+export function table(value) {
   if (isIE()) {
-    dir(v);
+    dir(value);
   } else {
-    console.table(v);
+    console.table(value);
   }
 }
 
 /**
  * Write group message on the console tab
  * This api cannot use at IE9 to IE10 browser because browser compatibility issue
- * @param {Object} [v = []] group list
+ * @param {Object} [value = []] group list
  * @param {string|string[]} [label='group'] label
- * @param {Object|Object[]} [style] style object
+ * @param {Object|Object[]} style style object
  * @example
  * group([1, 2, 3], 'GROUP 1')
  */
-export function group(v = [], label = DEFAULT_LABEL.label, style) {
+export function group(value = [], label = DEFAULT_LABEL.label, style) {
   if (!(isIE(9) || isIE(10))) {
     console.group(...getStyleMsg(label, style));
-    report(v);
+    report(value);
     console.groupEnd();
   }
 }
@@ -250,16 +250,16 @@ export function group(v = [], label = DEFAULT_LABEL.label, style) {
 /**
  * Write groupCollapsed message on the console tab
  * This api cannot use at IE9 to IE10 browser because browser compatibility issue
- * @param {Object} [v = []] groupCollapsed list
+ * @param {Object} [value = []] groupCollapsed list
  * @param {string|string[]} [label='group'] label
- * @param {Object|Object[]} [style] style object
+ * @param {Object|Object[]} style style object
  * @example
  * groupCollapsed([1, 2, 3], 'GROUP 1')
  */
-export function groupCollapsed(v = [], label = DEFAULT_LABEL.label, style) {
+export function groupCollapsed(value = [], label = DEFAULT_LABEL.label, style) {
   if (!(isIE(9) || isIE(10))) {
     console.groupCollapsed(...getStyleMsg(label, style));
-    report(v);
+    report(value);
     console.groupEnd();
   }
 }
@@ -281,27 +281,27 @@ export function groupLog(msg, style, label, labelStyle) {
 /**
  * Write group message with object information on the console tab
  * This api cannot use at IE9 to IE10 browser because browser compatibility issue
- * @param {Object} [v] object value
+ * @param {Object} value object value
  * @param {string|string[]} [label='group'] label
  * @param {Object|Object[]} labelStyle style object
  * @example
  * groupTable({ x: 1, y: 2 }, 'GROUP TABLE', { color: 'magenta' });
  */
-export function groupTable(v, label, labelStyle) {
-  group([() => table(v)], label, labelStyle);
+export function groupTable(value, label, labelStyle) {
+  group([() => table(value)], label, labelStyle);
 }
 
 /**
  * Write group message with object information on the console tab
  * This api cannot use at IE9 to IE10 browser because browser compatibility issue
- * @param {Object} [v] object value
+ * @param {Object} value object value
  * @param {string|string[]} [label='group'] label
  * @param {Object|Object[]} labelStyle style object
  * @example
  * groupDir({ x: 1, y: 2 }, 'GROUP DIR', { color: 'cyan' });
  */
-export function groupDir(v, label, labelStyle) {
-  group([() => dir(v)], label, labelStyle);
+export function groupDir(value, label, labelStyle) {
+  group([() => dir(value)], label, labelStyle);
 }
 
 /**
@@ -321,33 +321,33 @@ export function groupCollapsedLog(msg, style, label, labelStyle) {
 /**
  * Write groupCollapsed message with object information on the console tab
  * This api cannot use at IE9 to IE10 browser because browser compatibility issue
- * @param {Object} [v] object value
+ * @param {Object} value object value
  * @param {string|string[]} [label='group'] label
  * @param {Object|Object[]} labelStyle style object
  * @example
  * groupCollapsedTable({ x: 1, y: 2 }, 'GROUP COLLAPSED TABLE', { color: 'blue' });
  */
-export function groupCollapsedTable(v, label, labelStyle) {
-  groupCollapsed([() => table(v)], label, labelStyle);
+export function groupCollapsedTable(value, label, labelStyle) {
+  groupCollapsed([() => table(value)], label, labelStyle);
 }
 
 /**
  * Write groupCollapsed message with object information on the console tab
  * This api cannot use at IE9 to IE10 browser because browser compatibility issue
- * @param {Object} [v] object value
+ * @param {Object} value object value
  * @param {string|string[]} [label='group'] label
  * @param {Object|Object[]} labelStyle style object
  * @example
  * groupCollapsedDir({ x: 1, y: 2 }, 'GROUP COLLAPSED DIR', { color: 'yellow' });
  */
-export function groupCollapsedDir(v, label, labelStyle) {
-  groupCollapsed([() => dir(v)], label, labelStyle);
+export function groupCollapsedDir(value, label, labelStyle) {
+  groupCollapsed([() => dir(value)], label, labelStyle);
 }
 
 /**
  * Draw image that included the text on the console tab
  * This api can use at only browser that supported canvas api
- * @param {string} [v] Image url
+ * @param {string} url Image url
  * @param {{color: string, text: string}} [option={ x = 0, y = 0, font = "10px 'serif'" }] Font style object
  * @param {string} option.text Text on the image
  * @param {number} option.x X-axis of the text
@@ -356,9 +356,9 @@ export function groupCollapsedDir(v, label, labelStyle) {
  * @example
  * image('https://pubpress.net/houseads/2018/03/15/wordads/3-8-300x250.png', { text: 'Hello World', color: 'azure' });
  */
-export function image(v, option) {
+export function image(url, option) {
   if (isBrowser() && supportsCanvas()) {
-    asyncToSync(getImageMsg(v, option))
+    asyncToSync(getImageMsg(url, option))
       .then(v => {
         console.log(...v);
       })
